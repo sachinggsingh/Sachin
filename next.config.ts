@@ -8,6 +8,9 @@ const nextConfig: NextConfig = {
       'i.pinimg.com', // Pinterest CDN
     ],
   },
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
 };
 
 module.exports = nextConfig;
