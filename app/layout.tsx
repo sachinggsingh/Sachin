@@ -25,21 +25,20 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body
-        className={`${sourceCodePro.variable} antialiased`}
-      >
+    <html
+      lang="en"
+      className={sourceCodePro.variable}
+      suppressHydrationWarning
+    >
+      <body className="antialiased">
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <GridBackgroundDemo>
-            {/* Theme Toggle Button - fixed top right */}
             <div className="fixed top-4 right-4 z-50">
               <ThemeToggle />
             </div>
-            {/* Main content container */}
             <div className="max-w-7xl mx-auto px-8 sm:px-12 lg:px-20 xl:px-32">
               {children}
             </div>
-            {/* Floating Dock - fixed bottom center */}
             <div className="fixed bottom-8 left-1/2 transform -translate-x-1/2 z-50">
               <FloatingDockDemo />
             </div>
@@ -49,3 +48,4 @@ export default function RootLayout({
     </html>
   );
 }
+

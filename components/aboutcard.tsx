@@ -2,7 +2,7 @@
 import React from "react";
 import { LinkPreview } from "@/components/ui/link-preview";
 
-export function AboutCard() {
+export function   AboutCard() {
   return (
     <div className="flex flex-col items-center justify-center gap-6 py-12 px-4">
       <p className="text-neutral-700 dark:text-neutral-200 text-xl md:text-2xl max-w-2xl text-center leading-relaxed mb-2">
@@ -50,7 +50,7 @@ export function AboutCard() {
         >
           Nginx
         </LinkPreview>
-        .<br />
+        <br />
         Passionate about building{' '}
         <span className="font-semibold text-purple-600 dark:text-red-400">
           scalable, resilient systems
