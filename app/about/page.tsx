@@ -77,9 +77,9 @@ const AboutPage = () => {
     return (
         <section className="max-w-2xl mx-auto py-12 px-4">
             <h1 className="text-5xl font-bold mb-2">About Me</h1>
-            <p className="mb-8 text-lg">
+            <div className="mb-8 text-lg">
                 <TextGenerateEffect words={words} />
-            </p>
+            </div>
 
             <h2 className="text-3xl font-semibold mb-4">Good with</h2>
             <ul className="mb-6 flex flex-wrap gap-4">
@@ -114,7 +114,7 @@ const AboutPage = () => {
             </ul>
 
             <h2 className="text-3xl font-semibold mb-2">Internship Experience</h2>
-            <p className="mb-6">
+            <div className="mb-6">
                 • First internship was at{" "}
                 <span className="font-semibold">
                     <LinkPreview
@@ -136,8 +136,8 @@ const AboutPage = () => {
                 </span>
                 . This experience helped me gain hands-on skills in backend Technologies
                 and Frontend Technologies
-            </p>
-            <p className="mb-6">
+            </div>
+            <div className="mb-6">
                 • Second internship was at{" "}
                 <span className="font-semibold">
                     <LinkPreview
@@ -159,9 +159,9 @@ const AboutPage = () => {
                 </span>
                 . This experience helped me gain hands-on skills in real-world
                 development and teamwork.
-            </p>
+            </div>
             <h2 className="text-2xl font-semibold mb-2">Current Project</h2>
-            <p className="mb-12">
+            <div className="mb-12">
                 I am currently working on{" "}
                 <span className="font-semibold">
                     {" "}
@@ -173,7 +173,7 @@ const AboutPage = () => {
                     </LinkPreview>
                 </span>{" "}
                 which is a TypeScript-MySql job portal web app.
-            </p>
+            </div>
         </section>
     );
 };

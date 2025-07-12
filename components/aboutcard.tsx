@@ -5,7 +5,7 @@ import { LinkPreview } from "@/components/ui/link-preview";
 export function   AboutCard() {
   return (
     <div className="flex flex-col items-center justify-center gap-6 py-12 px-4">
-      <p className="text-neutral-700 dark:text-neutral-200 text-xl md:text-2xl max-w-2xl text-center leading-relaxed mb-2">
+      <div className="text-neutral-700 dark:text-neutral-200 text-xl md:text-2xl max-w-2xl text-center leading-relaxed mb-2">
         Proefficinet and having good Knowledge of {' '} 
         <LinkPreview
           url="https://nodejs.org"
@@ -56,7 +56,7 @@ export function   AboutCard() {
           scalable, resilient systems
         </span>{' '}
         that perform under pressure.
-      </p>
+      </div>
     </div>
   );
 }
