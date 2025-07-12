@@ -9,6 +9,8 @@ import {
     SiExpress,
     SiMongodb,
 } from "react-icons/si";
+import { GrMysql } from "react-icons/gr";
+import { BiLogoPostgresql } from "react-icons/bi";
 import { FaDocker } from "react-icons/fa";
 import { SiNginx } from "react-icons/si";
 import { TextGenerateEffect } from "@/components/ui/text-generate-effect";
@@ -49,6 +51,16 @@ const technologies = [
         icon: <SiMongodb className="text-green-700" />,
         name: "MongoDB",
         url: "https://www.mongodb.com/",
+    },
+    {
+        icon: <GrMysql className="text-green-700" />,
+        name: "MySql",
+        url: "https://www.mysql.com",
+    },
+    {
+        icon: <BiLogoPostgresql className="text-green-700" />,
+        name: "PostgreSql",
+        url: "https://www.postgresql.org/",
     },
 ];
 
