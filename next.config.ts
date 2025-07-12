@@ -6,7 +6,7 @@ const nextConfig: NextConfig = {
       'images.unsplash.com',
       'api.microlink.io', // Microlink Image Preview
       'i.pinimg.com', // Pinterest CDN
-    ],
+  ],
   },
   eslint: {
     ignoreDuringBuilds: true,

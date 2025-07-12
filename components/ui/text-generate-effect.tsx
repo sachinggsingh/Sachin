@@ -8,18 +8,35 @@ export const TextGenerateEffect = ({
   className,
   filter = true,
   duration = 0.5,
+  staggerDelay = 0.2, // new prop
   onComplete,
+  disableAnimation = false, // new prop
 }: {
   words: string;
   className?: string;
   filter?: boolean;
   duration?: number;
+  staggerDelay?: number; // new prop
   onComplete?: () => void;
+  disableAnimation?: boolean; // new prop
 }) => {
   const [scope, animate] = useAnimate();
   const wordsArray = words.split(" ");
   
   useEffect(() => {
+    if (disableAnimation) {
+      animate(
+        "span",
+        {
+          opacity: 1,
+          filter: "blur(0px)",
+        },
+        { duration: 0 }
+      ).then(() => {
+        if (onComplete) onComplete();
+      });
+      return;
+    }
     animate(
       "span",
       {
@@ -28,7 +45,7 @@ export const TextGenerateEffect = ({
       },
       {
         duration: duration ? duration : 1,
-        delay: stagger(0.2),
+        delay: stagger(staggerDelay), // use the new prop
       }
     ).then(() => {
       // Call onComplete when animation finishes
@@ -36,7 +53,7 @@ export const TextGenerateEffect = ({
         onComplete();
       }
     });
-  }, [scope.current]);
+  }, [scope.current, staggerDelay, duration, filter, animate, onComplete, disableAnimation]);
 
   const renderWords = () => {
     return (
@@ -61,7 +78,7 @@ export const TextGenerateEffect = ({
   return (
     <div className={cn("font-bold", className)}>
       <div className="mt-4">
-        <div className=" dark:text-white text-black text-xl leading-snug tracking-widest">
+        <div className="dark:text-white text-black text-base sm:text-lg md:text-xl leading-snug tracking-normal sm:tracking-wide md:tracking-widest break-words whitespace-pre-line">
           {renderWords()}
         </div>
       </div>

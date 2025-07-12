@@ -99,11 +99,15 @@ export function PlaceholdersAndVanishInput({
     newDataRef.current = newData;
   }, [value]);
 
+  // Only run draw and animation logic on the client
   useEffect(() => {
+    if (typeof window === 'undefined') return;
     draw();
   }, [value, draw]);
 
+  // Only run animation logic on the client
   const animate = (start: number) => {
+    if (typeof window === 'undefined') return;
     const animateFrame = (pos: number = 0) => {
       requestAnimationFrame(() => {
         const newArr: PixelData[] = [];
