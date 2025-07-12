@@ -14,6 +14,7 @@ import { BiLogoPostgresql } from "react-icons/bi";
 import { FaDocker } from "react-icons/fa";
 import { SiNginx } from "react-icons/si";
 import { TextGenerateEffect } from "@/components/ui/text-generate-effect";
+
 const words = `Nameste! from a  Backend Developer with a strong foundations and curosity to learn more.`;
 
 const technologies = [

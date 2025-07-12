@@ -22,6 +22,7 @@ export function PlaceholdersAndVanishInput({
   onSubmit: (e: FormEvent<HTMLFormElement>) => void;
 }) {
   const [currentPlaceholder, setCurrentPlaceholder] = useState<number>(0);
+  const [hasMounted, setHasMounted] = useState(false);
 
   const intervalRef = useRef<NodeJS.Timeout | null>(null);
   const startAnimation = () => {
@@ -39,6 +40,11 @@ export function PlaceholdersAndVanishInput({
   };
 
   useEffect(() => {
+    setHasMounted(true);
+  }, []);
+
+  useEffect(() => {
+    if (!hasMounted) return;
     startAnimation();
     document.addEventListener("visibilitychange", handleVisibilityChange);
 
@@ -48,7 +54,7 @@ export function PlaceholdersAndVanishInput({
       }
       document.removeEventListener("visibilitychange", handleVisibilityChange);
     };
-  }, [placeholders]);
+  }, [placeholders, hasMounted]);
 
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const newDataRef = useRef<PixelData[]>([]);
@@ -193,6 +199,8 @@ export function PlaceholdersAndVanishInput({
         )}
         ref={canvasRef}
       />
+      {/*
+        NOTE: If you see a hydration mismatch warning related to the <input> element, it is likely caused by a browser extension (such as a password manager) injecting attributes (e.g., fdprocessedid) before React hydrates. This is not a bug in the code and does not affect functionality. Test in a private window with extensions disabled to confirm. */}
       <input
         onChange={(e) => {
           if (!animating) {
@@ -258,7 +266,7 @@ export function PlaceholdersAndVanishInput({
                     y: 5,
                     opacity: 0,
                   }}
-                  key={`current-placeholder-${currentPlaceholder}`}
+                  key={`current-placeholder-${hasMounted ? currentPlaceholder : 0}`}
                   animate={{
                     y: 0,
                     opacity: 1,
@@ -273,7 +281,7 @@ export function PlaceholdersAndVanishInput({
                   }}
                   className="dark:text-zinc-500 text-sm sm:text-base font-normal text-neutral-500 pl-4 sm:pl-12 text-left w-[calc(100%-2rem)] truncate"
                 >
-                  {placeholders[currentPlaceholder]}
+                  {placeholders[hasMounted ? currentPlaceholder : 0]}
                 </motion.p>
               );
             }
