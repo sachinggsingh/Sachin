@@ -1,14 +1,13 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Source_Code_Pro } from "next/font/google";
 import "./globals.css";
+import { ThemeProvider } from "@/components/theme-provider";
+import { FloatingDockDemo } from "@/components/navbar";
+import { ThemeToggle } from "@/components/theme-toggle";
+import { GridBackgroundDemo } from "@/components/grid-background";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const sourceCodePro = Source_Code_Pro({
+  variable: "--font-source-code-pro",
   subsets: ["latin"],
 });
 
@@ -25,9 +24,24 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${sourceCodePro.variable} antialiased`}
       >
-        {children}
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+          <GridBackgroundDemo>
+            {/* Theme Toggle Button - fixed top right */}
+            <div className="fixed top-4 right-4 z-50">
+              <ThemeToggle />
+            </div>
+            {/* Main content container */}
+            <div className="max-w-7xl mx-auto px-8 sm:px-12 lg:px-20 xl:px-32">
+              {children}
+            </div>
+            {/* Floating Dock - fixed bottom center */}
+            <div className="fixed bottom-8 left-1/2 transform -translate-x-1/2 z-50">
+              <FloatingDockDemo />
+            </div>
+          </GridBackgroundDemo>
+        </ThemeProvider>
       </body>
     </html>
   );
