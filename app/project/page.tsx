@@ -5,7 +5,7 @@ import Image from "next/image";
 import { projects } from "./projects-data";
 import { FaGithub } from "react-icons/fa";
 
-export function TracingBeamDemo() {
+export default function Page() {
   return (
     <TracingBeam className="px-8">
       <div className="max-w-7xl mx-auto antialiased pt-4 relative">
@@ -69,5 +69,3 @@ export function TracingBeamDemo() {
     </TracingBeam>
   );
 }
-
-export default TracingBeamDemo;
