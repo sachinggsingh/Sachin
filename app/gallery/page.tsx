@@ -1,6 +1,6 @@
 import { FocusCards } from "@/components/ui/focus-cards";
 
-export function  Page() {
+export default function Page() {
     const cards = [
         {
             title: "Energy",
@@ -42,7 +42,4 @@ export function  Page() {
     return <FocusCards cards={cards} />;
 }
 
-
-
-export default Page;
 
