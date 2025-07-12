@@ -9,7 +9,7 @@ interface PixelData {
   x: number;
   y: number;
   r: number;
-  color: string;
+  color: string;  
 }
 
 export function PlaceholdersAndVanishInput({
@@ -171,6 +171,7 @@ export function PlaceholdersAndVanishInput({
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     vanishAndSubmit();
+    // eslint-disable-next-line @typescript-eslint/no-unused-expressions
     onSubmit && onSubmit(e);
   };
   return (
@@ -192,6 +193,7 @@ export function PlaceholdersAndVanishInput({
         onChange={(e) => {
           if (!animating) {
             setValue(e.target.value);
+            // eslint-disable-next-line @typescript-eslint/no-unused-expressions
             onChange && onChange(e);
           }
         }}
