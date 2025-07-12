@@ -5,9 +5,11 @@ const nextConfig: NextConfig = {
     domains: [
       'images.unsplash.com',
       'api.microlink.io', // Microlink Image Preview
+      'i.pinimg.com', // Pinterest CDN
     ],
   },
 };
+
 module.exports = nextConfig;
 
 export default nextConfig;
