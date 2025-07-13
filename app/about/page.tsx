@@ -13,9 +13,7 @@ import { GrMysql } from "react-icons/gr";
 import { BiLogoPostgresql } from "react-icons/bi";
 import { FaDocker } from "react-icons/fa";
 import { SiNginx } from "react-icons/si";
-import { TextGenerateEffect } from "@/components/ui/text-generate-effect";
-
-const words = `Nameste! from a  Backend Developer with a strong foundations and curosity to learn more.`;
+import { TextAnimate } from "@/components/magicui/text-animate";
 
 const technologies = [
     {
@@ -79,7 +77,8 @@ const AboutPage = () => {
         <section className="max-w-2xl mx-auto py-12 px-4">
             <h1 className="text-5xl font-bold mb-2">About Me</h1>
             <div className="mb-8 text-lg">
-                <TextGenerateEffect words={words} />
+                <TextAnimate animation="blurIn" as="h1">
+                    Nameste! from a  Backend Developer with a strong foundations and curosity to learn more.</TextAnimate >
             </div>
 
             <h2 className="text-3xl font-semibold mb-4">Good with</h2>
