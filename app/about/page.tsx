@@ -83,7 +83,7 @@ const AboutPage = () => {
         <section className="max-w-2xl mx-auto py-12 px-4">
             <h1 className="text-5xl font-bold mb-2">About Me</h1>
             <div className="mb-8 text-lg">
-                <TextAnimate animation="blurIn" as="h1">
+                <TextAnimate animation="blurIn" as="h1" once>
                     Nameste! from a  Backend Developer with a strong foundations and curosity to learn more.</TextAnimate >
             </div>
 

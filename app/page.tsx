@@ -16,7 +16,7 @@ export default function Home() {
       </div>
 
       {/* Hero Section */}
-      <section className="flex flex-col min-h-[70vh] sm:min-h-[70vh]  px-4 justify-center items-center">
+      <section className="flex flex-col min-h-[70vh] sm:min-h-[68vh]  px-4 justify-center items-center">
         <HeroSection />
         <PlaceholdersAndVanishInputDemo />
       </section>
@@ -42,7 +42,7 @@ export default function Home() {
           </p>
           <div className="flex gap-6 justify-center mt-2">
             <a
-              href=""
+              href="https://www.linkedin.com/in/sachin-g-singh"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="LinkedIn"

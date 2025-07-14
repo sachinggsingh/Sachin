@@ -19,12 +19,13 @@ export function PlaceholdersAndVanishInputDemo() {
     console.log("submitted");
   };
   return (
-    <div className="flex flex-col items-center px-4 mt-4 mb-12">
+    <div className="flex flex-col items-center px-4  mb-16">
     
       <PlaceholdersAndVanishInput
         placeholders={placeholders}
         onChange={handleChange}
         onSubmit={onSubmit}
+        className="shadow-xl/30 dark:shadow-none"
       />
     </div>
   );

@@ -10,7 +10,6 @@ export function HeroSection() {
         <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-4 mt-6">Sachin Singh</h1>
         <p className="text-base sm:text-lg md:text-xl text-gray-600 dark:text-gray-300 mb-10">Backend Developer</p>
         <TextGenerateEffectDemo1/>
-        {/* <TextGenerateEffectDemo2/>TextGenerateEffectDemo2 */}
       </div>
     </section>
   );
