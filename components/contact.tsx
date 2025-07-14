@@ -6,9 +6,8 @@ export function PlaceholdersAndVanishInputDemo() {
   const placeholders = [
     "What's your name?",
     "Lets' Connect !!!",
-    "Can we dive deeper into Backend Technologies???",
     "How can I help you?",
-    "Let's build something great together!",
+    "Let's build something !",
   ];
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
