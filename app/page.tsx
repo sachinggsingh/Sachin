@@ -7,7 +7,6 @@ import { CiMail } from "react-icons/ci";
 import { FaGithub } from "react-icons/fa";
 import { PlaceholdersAndVanishInputDemo } from "@/components/contact";
 
-
 export default function Home() {
   return (
     <div className="py-8">
@@ -17,7 +16,7 @@ export default function Home() {
       </div>
 
       {/* Hero Section */}
-      <section className="min-h-[70vh] px-4">
+      <section className="flex flex-col min-h-[70vh] sm:min-h-[70vh]  px-4 justify-center items-center">
         <HeroSection />
         <PlaceholdersAndVanishInputDemo />
       </section>
@@ -26,7 +25,6 @@ export default function Home() {
       <section className="pt-2">
         <AboutCard />
       </section>
-
 
       {/* Interests Section */}
       <section className="py-16 px-4">
@@ -59,7 +57,7 @@ export default function Home() {
             >
               <CiMail />
             </a>
-            <a href="https://github.com/sacahinggsingh" aria-label="Email" className="inline-flex items-center justify-center w-14 h-14 rounded-full bg-gray-100 dark:bg-neutral-800 text-gray-700 dark:text-gray-200 hover:bg-gray-200 hover:text-gray-900 dark:hover:bg-neutral-700 dark:hover:text-white transition-colors text-2xl shadow-md"
+            <a href="https://github.com/sachinggsingh" aria-label="Email" className="inline-flex items-center justify-center w-14 h-14 rounded-full bg-gray-100 dark:bg-neutral-800 text-gray-700 dark:text-gray-200 hover:bg-gray-200 hover:text-gray-900 dark:hover:bg-neutral-700 dark:hover:text-white transition-colors text-2xl shadow-md"
             >
               <FaGithub/>
             </a>
