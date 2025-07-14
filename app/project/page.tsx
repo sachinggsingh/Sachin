@@ -12,7 +12,7 @@ export default function Page() {
         {projects.map((item, index) => (
           <div key={`content-${index}`} className="mb-14 sm:mb-20 sm:justify-center md:mb-28">
             <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-4 gap-3 sm:gap-0">
-              <h2 className="bg-black text-white rounded-full text-sm sm:text-lg md:text-xl w-fit px-4 py-1">
+              <h2 className="bg-black dark:bg-white dark:text-black text-white rounded-full text-sm sm:text-lg md:text-xl w-fit px-4 py-1">
                 {item.badge}
               </h2>
               {item.github && (

@@ -1,5 +1,8 @@
 import { IoLogoJavascript } from "react-icons/io5";
 import { SiTypescript, SiReact, SiNodedotjs, SiExpress, SiMongodb, SiMysql } from "react-icons/si";
+import { RiGeminiFill } from "react-icons/ri";
+import { RiNextjsFill } from "react-icons/ri";
+
 
 export const projects = [
   {
@@ -18,6 +21,47 @@ export const projects = [
       { icon: <SiTypescript className="text-blue-500" />, name: 'TypeScript' },
       { icon: <SiMysql className="text-blue-600" />, name: 'MySQL' },
       { icon: <SiNodedotjs className="text-green-600" />, name: 'Node.js' },
+      { icon: <SiExpress className="text-gray-700 dark:text-gray-200" />, name: 'Express' },
+    ]
+  },
+  {
+    title: "WebIDE",
+    description: (
+      <>
+        <p>
+          An online compiler with the AI assistant to sumarize the code. Which let&apos;s you know what you are doing and what are you writing
+        </p>
+      </>
+    ),
+    badge: "Full Stack",
+    image: "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&q=80&w=800&h=600&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    github: "https://personalized-editor.vercel.app",
+    techStack: [
+      { icon: <RiNextjsFill className="text-w-white"/>, name:"Next.js"},
+      { icon: <SiTypescript className="text-yellow-400" />, name: 'JavaScript' },
+      { icon: <SiReact className="text-cyan-400" />, name: 'React' },
+      { icon: <SiNodedotjs className="text-green-600" />, name: 'Node.js' },
+      { icon: <RiGeminiFill className="text-green-700" />, name: 'Gemini API' },
+      { icon: <SiExpress className="text-gray-700 dark:text-gray-200" />, name: 'Express' },
+    ]
+  },
+  {
+    title: "PawPerfection",
+    description: (
+      <>
+        <p>
+          A Pet Training system from where you can train your pet at home only by your own self.
+        </p>
+      </>
+    ),
+    badge: "Full Stack",
+    image: "https://images.unsplash.com/photo-1587300003388-59208cc962cb?auto=format&fit=crop&q=80&w=3540&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    github: "https://github.com/sachinggsingh/PawPerfection",
+    techStack: [
+      { icon: <IoLogoJavascript className="text-yellow-400" />, name: 'JavaScript' },
+      { icon: <SiReact className="text-cyan-400" />, name: 'React' },
+      { icon: <SiNodedotjs className="text-green-600" />, name: 'Node.js' },
+      { icon: <SiMongodb className="text-green-700" />, name: 'MongoDB' },
       { icon: <SiExpress className="text-gray-700 dark:text-gray-200" />, name: 'Express' },
     ]
   },
@@ -53,26 +97,6 @@ export const projects = [
     badge: "Full Stack",
     image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=3540&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     github: "https://github.com/sachinggsingh/SystemFeedBack",
-    techStack: [
-      { icon: <IoLogoJavascript className="text-yellow-400" />, name: 'JavaScript' },
-      { icon: <SiReact className="text-cyan-400" />, name: 'React' },
-      { icon: <SiNodedotjs className="text-green-600" />, name: 'Node.js' },
-      { icon: <SiMongodb className="text-green-700" />, name: 'MongoDB' },
-      { icon: <SiExpress className="text-gray-700 dark:text-gray-200" />, name: 'Express' },
-    ]
-  },
-  {
-    title: "PawPerfection",
-    description: (
-      <>
-        <p>
-          A Pet Training system from where you can train your pet at home only by your own self.
-        </p>
-      </>
-    ),
-    badge: "Full Stack",
-    image: "https://images.unsplash.com/photo-1587300003388-59208cc962cb?auto=format&fit=crop&q=80&w=3540&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    github: "https://github.com/sachinggsingh/PawPerfection",
     techStack: [
       { icon: <IoLogoJavascript className="text-yellow-400" />, name: 'JavaScript' },
       { icon: <SiReact className="text-cyan-400" />, name: 'React' },
