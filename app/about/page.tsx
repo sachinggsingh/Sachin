@@ -12,6 +12,7 @@ import {
 import { GrMysql } from "react-icons/gr";
 import { BiLogoPostgresql } from "react-icons/bi";
 import { FaDocker } from "react-icons/fa";
+import { FaJava } from "react-icons/fa";
 import { SiNginx } from "react-icons/si";
 import { TextAnimate } from "@/components/magicui/text-animate";
 
@@ -22,34 +23,39 @@ const technologies = [
         url: "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
     },
     {
+        icon: <FaJava className="text-red-400" />,
+        name: "Java",
+        url: "https://www.java.com/en",
+    },
+    {
         icon: <SiTypescript className="text-blue-500" />,
         name: "TypeScript",
-        url: "https://www.typescriptlang.org/",
+        url: "https://www.typescriptlang.org",
     },
     {
         icon: <SiReact className="text-cyan-400" />,
         name: "React",
-        url: "https://react.dev/",
+        url: "https://react.dev",
     },
     {
         icon: <SiNextdotjs className="text-black dark:text-white" />,
         name: "Next.js",
-        url: "https://nextjs.org/",
+        url: "https://nextjs.org",
     },
     {
         icon: <SiNodedotjs className="text-green-600" />,
         name: "Node.js",
-        url: "https://nodejs.org/",
+        url: "https://nodejs.org",
     },
     {
         icon: <SiExpress className="text-gray-700 dark:text-gray-200" />,
         name: "Express",
-        url: "https://expressjs.com/",
+        url: "https://expressjs.com",
     },
     {
         icon: <SiMongodb className="text-green-700" />,
         name: "MongoDB",
-        url: "https://www.mongodb.com/",
+        url: "https://www.mongodb.com",
     },
     {
         icon: <GrMysql className="text-green-700" />,
@@ -59,7 +65,7 @@ const technologies = [
     {
         icon: <BiLogoPostgresql className="text-green-700" />,
         name: "PostgreSql",
-        url: "https://www.postgresql.org/",
+        url: "https://www.postgresql.org",
     },
 ];
 

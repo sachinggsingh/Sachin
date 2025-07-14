@@ -15,12 +15,12 @@ export default function ProjectLayout({
               My Projects
             </h1>
             <p className="text-xl text-neutral-600 dark:text-neutral-400 max-w-2xl mx-auto">
-              Here are some of the projects I&apos;ve worked on, showcasing my skills in full-stack development and problem-solving.
+              My projects I&apos;ve worked on, showcasing my skills in Full-Stack Development and  Backend Develpoment.
             </p>
           </div>
 
           {/* Main Content */}
-          <main className="relative left-16">
+          <main className="relative ">
             {children}
           </main>
         </div>
