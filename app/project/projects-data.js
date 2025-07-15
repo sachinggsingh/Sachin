@@ -2,6 +2,7 @@ import { IoLogoJavascript } from "react-icons/io5";
 import { SiTypescript, SiReact, SiNodedotjs, SiExpress, SiMongodb, SiMysql } from "react-icons/si";
 import { RiGeminiFill } from "react-icons/ri";
 import { RiNextjsFill } from "react-icons/ri";
+import { SiRedux } from "react-icons/si";
 
 
 export const projects = [
@@ -19,7 +20,7 @@ export const projects = [
     github: "https://github.com/sachinggsingh/Job-Dekho",
     techStack: [
       { icon: <SiTypescript className="text-blue-500" />, name: 'TypeScript' },
-      { icon: <SiMysql className="text-blue-600" />, name: 'MySQL' },
+      { icon: <SiMysql className="text-red-800" />, name: 'MySQL' },
       { icon: <SiNodedotjs className="text-green-600" />, name: 'Node.js' },
       { icon: <SiExpress className="text-gray-700 dark:text-gray-200" />, name: 'Express' },
     ]
@@ -38,7 +39,7 @@ export const projects = [
     github: "https://personalized-editor.vercel.app",
     techStack: [
       { icon: <RiNextjsFill className="text-w-white"/>, name:"Next.js"},
-      { icon: <SiTypescript className="text-yellow-400" />, name: 'JavaScript' },
+      { icon: <SiTypescript className="text-blue-500" />, name: 'TypeScript' },
       { icon: <SiReact className="text-cyan-400" />, name: 'React' },
       { icon: <SiNodedotjs className="text-green-600" />, name: 'Node.js' },
       { icon: <RiGeminiFill className="text-green-700" />, name: 'Gemini API' },
@@ -60,6 +61,7 @@ export const projects = [
     techStack: [
       { icon: <IoLogoJavascript className="text-yellow-400" />, name: 'JavaScript' },
       { icon: <SiReact className="text-cyan-400" />, name: 'React' },
+      { icon: <SiRedux  className="text-violet-700" />, name: 'Redux toolkit' },
       { icon: <SiNodedotjs className="text-green-600" />, name: 'Node.js' },
       { icon: <SiMongodb className="text-green-700" />, name: 'MongoDB' },
       { icon: <SiExpress className="text-gray-700 dark:text-gray-200" />, name: 'Express' },
@@ -80,6 +82,7 @@ export const projects = [
     techStack: [
       { icon: <IoLogoJavascript className="text-yellow-400" />, name: 'JavaScript' },
       { icon: <SiReact className="text-cyan-400" />, name: 'React' },
+      { icon: <SiRedux  className="text-violet-700" />, name: 'Redux toolkit' },
       { icon: <SiNodedotjs className="text-green-600" />, name: 'Node.js' },
       { icon: <SiMongodb className="text-green-700" />, name: 'MongoDB' },
       { icon: <SiExpress className="text-gray-700 dark:text-gray-200" />, name: 'Express' },

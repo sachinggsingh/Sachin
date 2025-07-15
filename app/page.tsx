@@ -34,9 +34,9 @@ export default function Home() {
       </section>
 
       {/* Contact Section */}
-      <section className="py-20 px-4">
+      <section className="py-30 px-4">
         <div className="max-w-4xl mx-auto flex flex-col items-center text-center">
-          <h2 className="text-4xl font-bold mb-6 tracking-tight">Get In Touch</h2>
+          <h2 className="text-4xl font-bold mb-6 tracking-tight mb-4">Get In Touch</h2>
           <p className="text-xl text-muted-foreground mb-8 max-w-2xl">
             I&apos;m always open to new opportunities and collaborations. Feel free to reach out!
           </p>
