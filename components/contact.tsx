@@ -34,7 +34,7 @@ export function PlaceholdersAndVanishInputDemo() {
         toast("Your Message Sent.", {
           description: (
             <span>
-              Hoping you sent the email too <CiFaceSmile />
+              Hoping you sent your email too <CiFaceSmile />
             </span>
           ),
         });
