@@ -2,7 +2,7 @@ import { NextRequest, NextResponse } from "next/server";
 import nodemailer from 'nodemailer'
 
 export async function POST(req: NextRequest) {
-    const { name, email, message } = await req.json();
+    const {message} = await req.json();
 
     const transporter = nodemailer.createTransport({
         service: 'gmail',
@@ -16,8 +16,8 @@ export async function POST(req: NextRequest) {
         await transporter.sendMail({
             from: process.env.EMAIL_USER,
             to: process.env.EMAIL_USER, // your email
-            subject: `New message from ${name}`,
-            text: `Email: ${email}\n\nMessage:\n${message}`,
+            subject: `New message from portfolio contact form`,
+            text: `Message:\n${message}`,
         });
         console.log("Send message")
         return NextResponse.json({ success: true });

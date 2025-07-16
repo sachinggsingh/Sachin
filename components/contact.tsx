@@ -3,13 +3,15 @@
 import { PlaceholdersAndVanishInput } from "./ui/placeholders-and-vanish-input";
 import axios from 'axios';
 import { toast } from "sonner"
+import { CiFaceSmile } from "react-icons/ci";
+
 
 export function PlaceholdersAndVanishInputDemo() {
   const placeholders = [
     "What's your name?",
+    "Your Email Please!",
     "Let's Connect !!!",
     "How can I help you?",
-    "Your Email Please!",
   ];
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -23,18 +25,22 @@ export function PlaceholdersAndVanishInputDemo() {
     const value = input?.value || "";
 
     const data = {
-      name: "Contact Form User",
-      email: "noreply@example.com",
       message: value,
     };
 
     try {
       const res = await axios.post("/api/contact", data);
       if (res.status === 200) {
-        toast("Your Mesage Sent.")
+        toast("Your Message Sent.", {
+          description: (
+            <span>
+              Hoping you sent the email too <CiFaceSmile />
+            </span>
+          ),
+        });
         form.reset();
       } else {
-        alert("Failed to send message");
+        toast("Failed to send message");
       }
     } catch (err) {
       console.error("Error sending message:", err);
