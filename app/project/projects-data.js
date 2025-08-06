@@ -9,6 +9,27 @@ import { SiRedux } from "react-icons/si";
 
 export const projects = [
   {
+    title: "Resume-AI",
+    description: (
+      <>
+        <p>
+          A Resume-AI web app that generates summary for the user&apos;s input and their resume template for the ats score and the recommendations to improve the resume and ats score of the user.
+        </p>
+      </>
+    ),
+    badge: "Full Stack",
+    image: "https://images.stockcake.com/public/b/1/9/b193908a-64a3-4f96-b357-17cd7f41a6db_large/professional-resume-review-stockcake.jpg",
+    github: "https://github.com/sachinggsingh/Resume-AI",
+    techStack: [
+      { icon: <RiNextjsFill className="text-w-white" />, name: "Next.js" },
+      { icon: <SiTypescript className="text-blue-500" />, name: 'TypeScript' },
+      {icon: <RiGeminiFill className="text-green-700" />, name: 'Gemini API' },
+      { icon: <SiMongodb className="text-red-800" />, name: 'MongoDB' },
+      { icon: <SiNodedotjs className="text-green-600" />, name: 'Node.js' },
+      { icon: <SiExpress className="text-gray-700 dark:text-gray-200" />, name: 'Express' },
+    ]
+  },
+  {
     title: "Job Dekho",
     description: (
       <>
@@ -65,9 +86,9 @@ export const projects = [
       { icon: <SiTypescript className="text-blue-500" />, name: 'TypeScript' },
       { icon: <IoLogoJavascript className="text-yellow-400" />, name: 'JavaScript' },
       { icon: <SiNodedotjs className="text-green-600" />, name: 'Node.js' },
-      {icon: <SiPostgresql className="text-violet-400" />, name: "PostgreSQL"},
+      { icon: <SiPostgresql className="text-violet-400" />, name: "PostgreSQL" },
       { icon: <SiMongodb className="text-green-700" />, name: 'MongoDB' },
-      {icon:<FaDocker className="text-reed-400"/>,name:"Docker"},
+      { icon: <FaDocker className="text-reed-400" />, name: "Docker" },
     ]
   },
   {

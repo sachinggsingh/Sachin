@@ -172,10 +172,10 @@ const AboutPage = () => {
                 <span className="font-semibold">
                     {" "}
                     <LinkPreview
-                        url="https://github.com/sachinggsingh/Job-Dekho"
+                        url="https://github.com/sachinggsingh/resume-AI"
                         className="font-semibold text-yellow-500 dark:text-brown-500 hover:underline"
                     >
-                        Job Dekho{" "}
+                        Resume AI{" "}
                     </LinkPreview>
                 </span>{" "}
                 which is a TypeScript-MySql job portal web app.

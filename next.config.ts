@@ -5,7 +5,8 @@ const nextConfig: NextConfig = {
     domains: [
       'images.unsplash.com',
       'api.microlink.io', // Microlink Image Preview
-      'i.pinimg.com', // Pinterest CDN
+      'i.pinimg.com', // Pinterest CDN,
+      'images.stockcake.com'
   ],
   },
   eslint: {
