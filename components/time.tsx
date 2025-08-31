@@ -1,13 +1,10 @@
 "use client";
 import { useState, useEffect } from "react";
 import { BsClockHistory } from "react-icons/bs";
-
 import { CiLocationOn } from "react-icons/ci";
-
 import React from "react";
 import { Button } from "./ui/moving-border";
 
-// TimeComponent
 export function TimeComponent() {
   const [time, setTime] = useState(new Date());
 
@@ -26,24 +23,51 @@ export function TimeComponent() {
     });
   };
 
+  const formatDate = (date: Date) => {
+    return date.toLocaleDateString("en-IN", {
+      weekday: "short",
+      day: "numeric",
+      month: "short",
+    });
+  };
+
+  const city = "Vadodara";
   const stateCode = "Guj";
-  const country= "India";
 
   return (
-    <div className="flex flex-col items-center space-y-2 text-gray-400 text-sm">
-      <div className="flex items-center gap-2">
-        <CiLocationOn className="w-6 h-6" />
-        <span> {stateCode},{country}</span>
+    <div className="flex items-center gap-5 text-sm group">
+      {/* Location Section */}
+      <div className="flex items-center gap-2 px-3 py-1.5  rounded-lg transition-all duration-300 ">
+        <CiLocationOn className="w-7 h-7  transition-transform duration-300 hover:scale-180" />
+        <div className="flex flex-col">
+          <span className="font-medium text-gray-800 dark:text-gray-200 leading-tight">
+            {city}
+          </span>
+          <span className="text-xm text-gray-900 dark:text-gray-100 leading-tight">
+            {stateCode}
+          </span>
+        </div>
       </div>
-      <div className="flex items-center gap-2">
-        <BsClockHistory className="w-6 h-4" />
-        <span>{formatTime(time)}</span>
+
+      {/* Time Section */}
+      <div className="flex items-center gap-2 px-3 py-1.5 rounded-lg transition-all duration-300 ">
+        <div className="relative">
+          <BsClockHistory className="w-5 h-5  transition-transform duration-300 hover:rotate-35" />
+          {/* <div className="absolute -top-1 -right-1 w-2 h-2 bg-green-400 rounded-full animate-pulse"></div> */}
+        </div>
+        <div className="flex flex-col">
+          <span className="font-mono font-bold text-gray-800 dark:text-gray-200 leading-tight text-lg tracking-wider">
+            {formatTime(time)}
+          </span>
+          <span className="text-xs text-gray-900 dark:text-gray-100 leading-tight">
+            {formatDate(time)}
+          </span>
+        </div>
       </div>
     </div>
   );
 }
 
-// MovingBorderDemo
 export function MovingBorderDemo() {
   return (
     <Button

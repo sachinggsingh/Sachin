@@ -56,7 +56,7 @@ export default function Page() {
                         className="flex items-center gap-2 bg-gray-100 dark:bg-gray-800 px-2 py-1 rounded-lg text-xs sm:text-sm"
                         title={tech.name}
                       >
-                        <span className="text-base">{tech.icon}</span>
+                        <span className="text-base ">{tech.icon}</span>
                         <span className="text-gray-700 dark:text-gray-300">{tech.name}</span>
                       </div>
                     ))}

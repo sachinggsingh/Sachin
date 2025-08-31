@@ -1,5 +1,9 @@
+import { FaGolang } from "react-icons/fa6";
+import { LuGithub } from "react-icons/lu";
+import { AiOutlineKubernetes } from "react-icons/ai";
+
 import { Card, CardTitle, CardFooter, CardDescription, CardContent, CardHeader } from "./ui/card";
-import { SiDocker, SiKubernetes, SiLinux, SiGithub, SiNginx } from "react-icons/si";
+import { SiDocker,  SiLinux,   } from "react-icons/si";
 
 export function Interest() {
   return (
@@ -9,11 +13,12 @@ export function Interest() {
       </CardHeader>
       <CardContent>
         <div className="flex flex-wrap justify-center gap-6 mb-8 text-4xl text-blue-500 dark:text-blue-400">
-          <SiDocker title="Docker" />
-          <SiKubernetes title="Kubernetes" />
-          <SiLinux title="Linux" />
-          <SiGithub title="GitHub" />
-          <SiNginx title="Nginx" />
+          <SiDocker className="h-15 w-15" title="Docker" />
+          <AiOutlineKubernetes className="h-15 w-15" title="Kubernetes" />
+          <SiLinux className="h-15 w-15" title="Linux" />
+          <LuGithub className="h-15 w-15" title="GitHub" />
+          {/* <SiNginx title="Nginx" /> */}
+          <FaGolang className="h-15 w-15" title="Golang" />
         </div>
         <CardDescription className="text-center text-base text-muted-foreground leading-relaxed">
           Exploring containerization, orchestration, and backend technologies.<br />

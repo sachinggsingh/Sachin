@@ -6,7 +6,7 @@ export function AboutCard() {
   return (
     <div className="flex flex-col items-center justify-center gap-6 py-12 px-4">
       <div className="text-neutral-700 dark:text-neutral-200 text-xl md:text-2xl max-w-2xl text-center leading-relaxed mb-2">
-      Proficient and having good Knowledge of {' '} 
+      Proficient with the Tech stack {' '} 
         <LinkPreview
           url="https://nodejs.org"
           className="font-semibold text-green-600 dark:text-green-400 hover:underline"
@@ -30,10 +30,10 @@ export function AboutCard() {
         , and{' '}
         
         <LinkPreview
-          url="https://www.postgresql.org/"
+          url="https://www.mysql.com"
           className="font-semibold text-red-700 dark:text-yellow-300 hover:underline"
         >
-          PostgresSql
+          MySQL
         </LinkPreview>
         .<br />
         Currently exploring{' '}
@@ -45,10 +45,10 @@ export function AboutCard() {
         </LinkPreview>{' '}
         and{' '}
         <LinkPreview
-          url="https://www.nginx.com"
+          url="https://go.dev"
           className="font-semibold text-gray-600 dark:text-gray-300 hover:underline"
         >
-          NGINX
+          GOLANG
         </LinkPreview>
         <br />
         Passionate about building{' '}

@@ -9,7 +9,7 @@ import { PlaceholdersAndVanishInputDemo } from "@/components/contact";
 
 export default function Home() {
   return (
-    <div className="py-8">
+    <div className="py-8 ">
       {/* Time Component - Fixed at top */}
       <div className="fixed top-4 left-16 z-50 hidden lg:block">
         <MovingBorderDemo />

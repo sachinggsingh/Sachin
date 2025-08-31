@@ -19,7 +19,7 @@ export const projects = [
     ),
     badge: "Full Stack",
     image: "https://images.stockcake.com/public/b/1/9/b193908a-64a3-4f96-b357-17cd7f41a6db_large/professional-resume-review-stockcake.jpg",
-    github: "https://github.com/sachinggsingh/Resume-AI",
+    github: "https://resume-ai-three-eta.vercel.app",
     techStack: [
       { icon: <RiNextjsFill className="text-w-white" />, name: "Next.js" },
       { icon: <SiTypescript className="text-blue-500" />, name: 'TypeScript' },

@@ -3,17 +3,15 @@ import { LinkPreview } from "@/components/ui/link-preview";
 import { IoLogoJavascript } from "react-icons/io5";
 import {
     SiTypescript,
-    SiReact,
     SiNextdotjs,
     SiNodedotjs,
     SiExpress,
     SiMongodb,
 } from "react-icons/si";
 import { GrMysql } from "react-icons/gr";
-import { BiLogoPostgresql } from "react-icons/bi";
 import { FaDocker } from "react-icons/fa";
 import { FaJava } from "react-icons/fa";
-import { SiNginx } from "react-icons/si";
+import { FaGolang } from "react-icons/fa6";
 import { TextAnimate } from "@/components/magicui/text-animate";
 
 const technologies = [
@@ -31,11 +29,6 @@ const technologies = [
         icon: <SiTypescript className="text-blue-500" />,
         name: "TypeScript",
         url: "https://www.typescriptlang.org",
-    },
-    {
-        icon: <SiReact className="text-cyan-400" />,
-        name: "React",
-        url: "https://react.dev",
     },
     {
         icon: <SiNextdotjs className="text-black dark:text-white" />,
@@ -62,25 +55,20 @@ const technologies = [
         name: "MySql",
         url: "https://www.mysql.com",
     },
-    {
-        icon: <BiLogoPostgresql className="text-green-700" />,
-        name: "PostgreSql",
-        url: "https://www.postgresql.org",
-    },
 ];
 
 const learning = [
     {
-        icon: <FaDocker className="" />,
+        icon: <FaDocker className="h-7 w-7"/>,
         name: "Docker",
         url: "https://www.docker.com/",
     },
-    { icon: <SiNginx className="" />, name: "Nginx", url: "https://nginx.org/" },
+    { icon: <FaGolang className="h-7 w-7" />, name: "Golang", url: "https://go.dev" },
 ];
 
 const AboutPage = () => {
     return (
-        <section className="max-w-2xl mx-auto py-12 px-4">
+        <section className="max-w-2xl mx-auto py-16 px-4">
             <h1 className="text-5xl font-bold mb-2">About Me</h1>
             <div className="mb-8 text-lg">
                 <TextAnimate animation="blurIn" as="h1" once>
@@ -96,7 +84,7 @@ const AboutPage = () => {
                             className="flex items-center gap-2 bg-gray-200 dark:bg-gray-700 px-4 py-2 rounded-full text-sm font-medium shadow hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors"
                         >
                             <span className="text-xl">{tech.icon}</span>
-                            <span>{tech.name}</span>
+                            <span className="text-xm">{tech.name}</span>
                         </LinkPreview>
                     </li>
                 ))}
@@ -113,7 +101,7 @@ const AboutPage = () => {
                             className="flex items-center gap-2 bg-gray-200 dark:bg-gray-700 px-4 py-2 rounded-full text-sm font-medium shadow hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors"
                         >
                             <span className="text-xl">{tech.icon}</span>
-                            <span>{tech.name}</span>
+                            <span className="text-xm">{tech.name}</span>
                         </LinkPreview>
                     </li>
                 ))}
@@ -166,6 +154,31 @@ const AboutPage = () => {
                 . This experience helped me gain hands-on skills in real-world
                 development and teamwork.
             </div>
+             <div className="mb-6">
+                • Currently intern at{" "}
+                <span className="font-semibold">
+                    <LinkPreview
+                        url="https://www.linkedin.com/company/getnomik/?originalSubdomain=in"
+                        className="font-semibold text-red-500 dark:text-green-400 hover:underline"
+                    >
+                        Getnomik{" "}
+                    </LinkPreview>
+                </span>{" "}
+                as a <span className="font-semibold">Backend Developer</span>
+                {/* ,  */}
+                {/* where */}
+                {/* I worked on{" "} */}
+                {/* <span className="font-semibold">
+                    <LinkPreview
+                        url="https://github.com/sachinggsingh/Expense_Manager"
+                        className="font-semibold text-blue-700 dark:text-violet-400 hover:underline"
+                    >
+                        Full Stack Expense Manager{" "}
+                    </LinkPreview>
+                </span>
+                . This experience helped me gain hands-on skills in real-world
+                development and teamwork. */}
+            </div>
             <h2 className="text-2xl font-semibold mb-2">Current Project</h2>
             <div className="mb-12">
                 I am currently working on{" "}
@@ -175,10 +188,10 @@ const AboutPage = () => {
                         url="https://github.com/sachinggsingh/resume-AI"
                         className="font-semibold text-yellow-500 dark:text-brown-500 hover:underline"
                     >
-                        Resume AI{" "}
+                        InternShip Project{" "}
                     </LinkPreview>
                 </span>{" "}
-                which is a TypeScript-MySql job portal web app.
+                which is a TypeScript-MySql web app.
             </div>
         </section>
     );
