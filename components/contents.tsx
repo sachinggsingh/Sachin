@@ -27,7 +27,7 @@ export function TextGenerateEffectDemo1() {
         by="word"
         once
         duration={2}
-        delay={2} // 👈 waits until headline finishes
+        delay={2} 
         startOnView={false}
       >
         {
