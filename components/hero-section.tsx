@@ -1,5 +1,5 @@
 'use client';
-import {TextGenerateEffectDemo1, } from '@/components/contents'
+import {TextGenerateEffectDemo1} from '@/components/contents'
 import React from "react";
 
 export function HeroSection() {
