@@ -2,7 +2,8 @@ import type { Metadata } from "next";
 import { Source_Code_Pro } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
-import { FloatingDockDemo } from "@/components/navbar";
+// import { FloatingDockDemo } from "@/components/navbar";
+import { DefaultDemo} from "@/components/navbar";
 import { ThemeToggle } from "@/components/theme-toggle";
 import { GridBackgroundDemo } from "@/components/grid-background";
 import { Toaster } from "@/components/ui/sonner"
@@ -17,7 +18,7 @@ export const metadata: Metadata = {
   title: "Sachin Singh",
   description: "Portfolio",
   icons:{
-    icon:"/favicon.svg"
+    icon:"/favicon.ico"
   }
 };
 
@@ -43,7 +44,7 @@ export default function RootLayout({
               <Toaster position="top-center" />
             </div>
             <div className="fixed bottom-8 left-1/2 transform -translate-x-1/2 z-50">
-              <FloatingDockDemo />
+              <DefaultDemo />
             </div>
           </GridBackgroundDemo>
         </ThemeProvider>

@@ -37,5 +37,3 @@ export function TextGenerateEffectDemo1() {
     </section>
   );
 }
-
-// <div className=""></div>

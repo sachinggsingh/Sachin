@@ -1,51 +1,123 @@
-import React from "react";
-import { FloatingDock } from "@/components/ui/floating-dock";
+// "use client"
+
+// import {
+//   FileText,
+//   Home,
+//   Lock,
+//   Mail,
+//   User,
+// } from "lucide-react"
+
+// import { ExpandedTabs } from "./ui/expanded-tabs"
+// import { IoPerson } from "react-icons/io5";
+// import { GrProjects } from "react-icons/gr";
+// import { LuGalleryHorizontalEnd } from "react-icons/lu";
+
+
+
+// export function DefaultDemo() {
+//   const tabs = [
+//     { title: "Home", icon: Home,href="/" },
+//     { title: "Project", icon:GrProjects,href="/projects"  },
+//     { type: "separator" as const },
+//     { title: "About", icon: IoPerson ,href="/about"},
+//     { title: "Gallery", icon:  LuGalleryHorizontalEnd,href="/gallery" },
+//   ]
+
+//   return (
+//     <div className="flex items-center justify-center">
+//       <ExpandedTabs tabs={tabs}
+//          tabs={tabs.map((tab) =>
+//           tab.type === "separator"
+//             ? tab
+//             : {
+//                 ...tab,
+//                 // Wrap each tab title with a Next.js Link
+//                 title: (
+//                   <Link href={tab.href} className="flex items-center gap-2">
+//                     <tab.icon className="w-4 h-4" />
+//                     {tab.title}
+//                   </Link>
+//                 ),
+//               }
+//         )} />
+//     </div>
+//   )
+// }
+
+// export function CustomColorDemo() {
+//   const tabs = [
+//     { title: "Profile", icon: User },
+//     { title: "Messages", icon: Mail },
+//     { type: "separator" as const },
+//     { title: "Documents", icon: FileText },
+//     { title: "Privacy", icon: Lock },
+//   ]
+
+//   return (
+//     <div className="flex flex-col gap-4">
+//       <ExpandedTabs
+//         tabs={tabs}
+//         activeColor="text-blue-500"
+//         className="border-blue-200 dark:border-blue-800"
+//       />
+//     </div>
+//   )
+// }
+
+
+
+
+"use client"
+
+import Link from "next/link"
 import {
-  IconHome,
-  IconUser,
-} from "@tabler/icons-react";
-import { TfiGallery } from "react-icons/tfi";
-import { GrProjects } from "react-icons/gr";
+  FileText,
+  Home,
+  Lock,
+  Mail,
+  User,
+} from "lucide-react"
 
+import { ExpandedTabs } from "./ui/expanded-tabs"
+import { IoPerson } from "react-icons/io5"
+import { GrProjects } from "react-icons/gr"
+import { LuGalleryHorizontalEnd } from "react-icons/lu"
 
+export function DefaultDemo() {
+  const tabs = [
+    { title: "Home", icon: Home, href: "/" },
+    { title: "Project", icon: GrProjects, href: "/project" },
+    { type: "separator" as const },
+    { title: "About", icon: IoPerson, href: "/about" },
+    { title: "Gallery", icon: LuGalleryHorizontalEnd, href: "/gallery" },
+  ]
 
-export function FloatingDockDemo() {
-  const links = [
-    {
-      title: "Home",
-      icon: (
-        <IconHome className="h-full w-full text-neutral-500 dark:text-neutral-300" />
-      ),
-      href: "/",
-    },
-
-    {
-      title: "Projects",
-      icon: (
-        <GrProjects className="h-full w-full text-neutral-500 dark:text-neutral-300" />
-      ),
-      href: "/project",
-    },
-    {
-      title: "About",
-      icon: (
-        <IconUser className="h-full w-full text-neutral-500 dark:text-neutral-300" />
-      ),
-      href: "/about",
-    },
-    {
-      title: "Gallery",
-      icon: (
-        <TfiGallery className="h-full w-full text-neutral-500 dark:text-neutral-300" />
-      ),
-      href: "/gallery",
-    },
-  ];
   return (
-    <div className="flex items-center justify-center w-full">
-      <FloatingDock
-        items={links}
+    <div className="flex items-center justify-center">
+      <ExpandedTabs
+        tabs={tabs}
       />
     </div>
-  );
+  )
+}
+
+export function CustomColorDemo() {
+  const tabs = [
+    { title: "Profile", icon: User },
+    { title: "Messages", icon: Mail },
+    { type: "separator" as const },
+    { title: "Documents", icon: FileText },
+    { title: "Privacy", icon: Lock },
+  ]
+
+  return (
+    <div className="flex flex-col gap-4">
+      <ExpandedTabs
+        tabs={tabs}
+        activeColor="text-blue-500"
+        className="border-blue-200 dark:border-blue-800"
+      />
+    </div>
+  )
 }

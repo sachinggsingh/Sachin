@@ -52,7 +52,7 @@ export default function Page() {
                   <div className="flex flex-wrap gap-2 sm:gap-3">
                     {item.techStack.map((tech, techIndex) => (
                       <div
-                        key={techIndex}
+                        key={`${index}-${tech.name}-${techIndex}`}
                         className="flex items-center gap-2 bg-gray-100 dark:bg-gray-800 px-2 py-1 rounded-lg text-xs sm:text-sm"
                         title={tech.name}
                       >
