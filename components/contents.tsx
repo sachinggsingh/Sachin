@@ -1,7 +1,5 @@
 "use client";
 import { TextAnimate } from "@/components/magicui/text-animate";
-// import { DiNodejs } from "react-icons/di";
-
 
 export function TextGenerateEffectDemo1() {
   return (

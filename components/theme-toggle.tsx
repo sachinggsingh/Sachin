@@ -37,8 +37,8 @@ export function ThemeToggle({ className = "", iconOnly = false }: { className?: 
       onClick={toggleTheme}
       className={
         iconOnly
-          ? `flex items-center justify-center h-full w-full text-neutral-500 dark:text-neutral-300 ${className}`
-          : `fixed top-4 right-4 z-50 p-3 rounded-full bg-white/90 dark:bg-[#0a0a0a] backdrop-blur-sm shadow-lg border border-gray-200/50 dark:border-gray-700/50 hover:shadow-xl transition-all duration-200 hover:scale-110 text-gray-700 dark:text-gray-200 hover:text-gray-900 dark:hover:text-white ${className}`
+          ? `cursor-pointer flex items-center justify-center h-full w-full text-neutral-500 dark:text-neutral-300 ${className}`
+          : `cursor-pointer fixed top-4 right-4 z-50 p-3 rounded-full bg-white/90 dark:bg-[#0a0a0a] backdrop-blur-sm shadow-lg border border-gray-200/50 dark:border-gray-700/50 hover:shadow-xl transition-all duration-200 hover:scale-110 text-gray-700 dark:text-gray-200 hover:text-gray-900 dark:hover:text-white ${className}`
       }
       aria-label={getLabel()}
       title={getLabel()}

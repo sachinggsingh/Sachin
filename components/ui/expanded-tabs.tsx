@@ -1,15 +1,20 @@
 "use client"
 
 import * as React from "react"
-import { AnimatePresence, motion } from "framer-motion"
+import {  motion } from "framer-motion"
 import { LucideIcon } from "lucide-react"
 import { useOnClickOutside } from "usehooks-ts"
-
+// AnimatePresence
 import { cn } from "@/lib/utils"
+import {
+  Tooltip,
+  TooltipTrigger,
+  TooltipContent,
+} from "@/components/ui/tooltip"
 
 interface Tab {
   title: string
-  icon: LucideIcon | React.ComponentType<any>
+  icon: LucideIcon | React.ComponentType<unknown>
   type?: never
   href?: string
 }
@@ -42,11 +47,11 @@ const buttonVariants = {
   }),
 }
 
-const spanVariants = {
-  initial: { width: 0, opacity: 0 },
-  animate: { width: "auto", opacity: 1 },
-  exit: { width: 0, opacity: 0 },
-}
+// const spanVariants = {
+//   initial: { width: 0, opacity: 0 },
+//   animate: { width: "auto", opacity: 1 },
+//   exit: { width: 0, opacity: 0 },
+// }
 
 const transition = { delay: 0.1, type: "spring" as const, bounce: 0, duration: 0.6 }
 
@@ -72,14 +77,14 @@ export function ExpandedTabs({
   }
 
   const Separator = () => (
-    <div className=" h-[24px] w-[1.2px] bg-border" aria-hidden="true" />
+    <div className="h-[24px] w-[1.2px] bg-border" aria-hidden="true" />
   )
 
   return (
     <div
       ref={outsideClickRef}
       className={cn(
-        " flex gap-2 rounded-2xl border bg-background p-1 shadow-sm ",
+        "flex gap-2 rounded-2xl border bg-background p-1 shadow-sm",
         className
       )}
     >
@@ -97,37 +102,43 @@ export function ExpandedTabs({
         }
 
         return (
-          <motion.button
-            key={tab.title}
-            variants={buttonVariants}
-            initial={false}
-            animate="animate"
-            custom={selected === index}
-            onClick={handleClick}
-            transition={transition}
-            className={cn(
-              "relative flex items-center rounded-xl px-4 py-2 text-sm font-medium transition-colors duration-300 cursor-pointer",
-              selected === index
-                ? cn("bg-muted", activeColor)
-                : "text-muted-foreground hover:bg-muted hover:text-foreground"
-            )}
-          >
-            <Icon size={20} />
-            <AnimatePresence initial={false}>
-              {selected === index && (
-                <motion.span
-                  variants={spanVariants}
-                  initial="initial"
-                  animate="animate"
-                  exit="exit"
-                  transition={transition}
-                  className="overflow-hidden"
-                >
-                  {tab.title}
-                </motion.span>
-              )}
-            </AnimatePresence>
-          </motion.button>
+          <Tooltip key={tab.title}>
+            <TooltipTrigger asChild>
+              <motion.button
+                variants={buttonVariants}
+                initial={false}
+                animate="animate"
+                custom={selected === index}
+                onClick={handleClick}
+                transition={transition}
+                className={cn(
+                  "relative flex items-center rounded-xl px-4 py-2 text-sm font-medium transition-colors duration-300 cursor-pointer",
+                  selected === index
+                    ? cn("bg-muted", activeColor)
+                    : "text-muted-foreground hover:bg-muted hover:text-foreground"
+                )}
+              >
+                <Icon size={20} />
+                {/* <AnimatePresence initial={false}>
+                  {selected === index && (
+                    <motion.span
+                      variants={spanVariants}
+                      initial="initial"
+                      animate="animate"
+                      exit="exit"
+                      transition={transition}
+                      className="overflow-hidden"
+                    >
+                      {tab.title}
+                    </motion.span>
+                  )}
+                </AnimatePresence> */}
+              </motion.button>
+            </TooltipTrigger>
+            <TooltipContent side="top" align="center">
+              <p>{tab.title}</p>
+            </TooltipContent>
+          </Tooltip>
         )
       })}
     </div>

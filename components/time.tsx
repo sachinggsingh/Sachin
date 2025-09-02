@@ -50,7 +50,7 @@ export function TimeComponent() {
       </div>
 
       {/* Time Section */}
-      <div className="flex items-center gap-2 px-3 py-1.5 rounded-lg transition-all duration-300 ">
+      <div className="flex items-center gap-2 px-3 py-1 rounded-lg transition-all duration-300 ">
         <div className="relative">
           <BsClockHistory className="w-5 h-5  transition-transform duration-300 hover:rotate-35" />
           {/* <div className="absolute -top-1 -right-1 w-2 h-2 bg-green-400 rounded-full animate-pulse"></div> */}
@@ -71,7 +71,7 @@ export function TimeComponent() {
 export function MovingBorderDemo() {
   return (
     <Button
-      borderRadius="1.75rem"
+      borderRadius="1.95rem"
       className="bg-#0a0a0a dark:bg-#0a0a0a text-black dark:text-white border-neutral-200 dark:border-slate-800 "
     >
       <TimeComponent />
