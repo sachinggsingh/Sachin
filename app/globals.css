@@ -120,6 +120,9 @@
     @apply bg-background text-foreground;
     font-family: var(--font-source-code-pro), 'Source Code Pro', monospace;
   }
+  body::-webkit-scrollbar {
+  display: none;
+}
   
   /* Ensure all text elements use Source Code Pro font */
   h1, h2, h3, h4, h5, h6, p, span, div, a, button, input, textarea, label {
