@@ -1,10 +1,10 @@
 "use client"
 
 import * as React from "react"
-import {  motion } from "framer-motion"
+import { motion } from "framer-motion"
 import { LucideIcon } from "lucide-react"
+import { IconType } from "react-icons"   // ✅ Import this
 import { useOnClickOutside } from "usehooks-ts"
-// AnimatePresence
 import { cn } from "@/lib/utils"
 import {
   Tooltip,
@@ -12,20 +12,19 @@ import {
   TooltipContent,
 } from "@/components/ui/tooltip"
 
-interface Tab {
-  title: string
-  icon: LucideIcon | React.ComponentType<unknown>
-  type?: never
-  href?: string
-}
-
-interface Separator {
-  type: "separator"
-  title?: never
-  icon?: never
-}
-
-type TabItem = Tab | Separator
+export type TabItem =
+  | {
+      title: string
+      icon: LucideIcon | IconType | React.ComponentType<any>
+      href?: string
+      type?: "tab"
+    }
+  | {
+      type: "separator"
+      title?: never
+      icon?: never
+      href?: never
+    }
 
 interface ExpandedTabsProps {
   tabs: TabItem[]
@@ -33,6 +32,7 @@ interface ExpandedTabsProps {
   activeColor?: string
   onChange?: (index: number | null) => void
 }
+
 
 const buttonVariants = {
   initial: {

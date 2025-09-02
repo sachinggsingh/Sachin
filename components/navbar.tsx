@@ -7,14 +7,14 @@ import {
   Mail,
   User,
 } from "lucide-react"
-import { ExpandedTabs } from "./ui/expanded-tabs"
+import { ExpandedTabs, TabItem } from "./ui/expanded-tabs"
 import { IoPerson } from "react-icons/io5"
 import { GrProjects } from "react-icons/gr"
 import { LuGalleryHorizontalEnd } from "react-icons/lu"
 
 
 export function DefaultDemo() {
-  const tabs = [
+  const tabs:TabItem[] = [
     { title: "Home", icon: Home, href: "/" },
     { title: "Project", icon: GrProjects, href: "/project" },
     { type: "separator" as const },
