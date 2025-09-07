@@ -23,7 +23,7 @@ export default function Home() {
       icon: CiMail,
       onClick: () => (window.location.href = "mailto:sachinggsingh@gmail.com"),
       label: "Mail Me",
-    },
+    }, 
     {
       icon: FaGithub,
       onClick: () => window.open("https://github.com/sachinggsingh", "_blank"),
