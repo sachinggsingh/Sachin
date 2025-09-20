@@ -155,7 +155,7 @@ const AboutPage = () => {
                 development and teamwork.
             </div>
              <div className="mb-6">
-                • Currently intern at{" "}
+                • Third Internship at{" "}
                 <span className="font-semibold">
                     <LinkPreview
                         url="https://www.linkedin.com/company/getnomik/?originalSubdomain=in"
@@ -165,33 +165,25 @@ const AboutPage = () => {
                     </LinkPreview>
                 </span>{" "}
                 as a <span className="font-semibold">Backend Developer</span>
-                {/* ,  */}
-                {/* where */}
-                {/* I worked on{" "} */}
-                {/* <span className="font-semibold">
-                    <LinkPreview
-                        url="https://github.com/sachinggsingh/Expense_Manager"
-                        className="font-semibold text-blue-700 dark:text-violet-400 hover:underline"
-                    >
-                        Full Stack Expense Manager{" "}
-                    </LinkPreview>
-                </span>
-                . This experience helped me gain hands-on skills in real-world
-                development and teamwork. */}
+                , 
+                where
+                I startrd from {" "}
+                building and optimizing the code architecure of the platform.
+                Enhancing my skills in the backend technologies, database management and problem-solving abilities.
             </div>
             <h2 className="text-2xl font-semibold mb-2">Current Project</h2>
             <div className="mb-12">
-                I am currently working on{" "}
+                I am currently working on{" "} PawPerfection
                 <span className="font-semibold">
                     {" "}
                     <LinkPreview
-                        url="https://github.com/sachinggsingh/resume-AI"
+                        url="https://github.com/sachinggsingh/PawPerfection"
                         className="font-semibold text-yellow-500 dark:text-brown-500 hover:underline"
                     >
-                        InternShip Project{" "}
+                        Personal Project{" "}
                     </LinkPreview>
                 </span>{" "}
-                which is a TypeScript-MySql web app.
+                which is a Mern-stack web app.
             </div>
         </section>
     );
