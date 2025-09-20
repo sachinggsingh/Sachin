@@ -1,5 +1,6 @@
 "use client";
 
+import React from "react";
 import { AboutCard } from "@/components/aboutcard";
 import { MovingBorderDemo } from "@/components/time";
 import { HeroSection } from "@/components/hero-section";
@@ -39,7 +40,7 @@ export default function Home() {
   return (
     <div className="py-8">
       <div className="fixed top-4 left-16 z-50 hidden lg:block">
-        <MovingBorderDemo />
+        {/* <MovingBorderDemo /> */}
       </div>
 
       <section className="flex flex-col min-h-[70vh] sm:min-h-[68vh] px-4 justify-center items-center">

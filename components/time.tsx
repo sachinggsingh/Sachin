@@ -37,7 +37,7 @@ export function TimeComponent() {
   return (
     <div className="flex items-center gap-5 text-sm group">
       {/* Location Section */}
-      <div className="flex items-center gap-2 px-3 py-1.5  rounded-lg transition-all duration-300 ">
+      {/* <div className="flex items-center gap-2 px-3 py-1.5  rounded-lg transition-all duration-300 ">
         <CiLocationOn className="w-7 h-7  transition-transform duration-300 hover:scale-180" />
         <div className="flex flex-col">
           <span className="font-medium text-gray-800 dark:text-gray-200 leading-tight">
@@ -47,14 +47,14 @@ export function TimeComponent() {
             {stateCode}
           </span>
         </div>
-      </div>
+      </div> */}
 
       {/* Time Section */}
       <div className="flex items-center gap-2 px-3 py-1 rounded-lg transition-all duration-300 ">
-        <div className="relative">
+        {/* <div className="relative">
           <BsClockHistory className="w-5 h-5  transition-transform duration-300 hover:rotate-35" />
-          {/* <div className="absolute -top-1 -right-1 w-2 h-2 bg-green-400 rounded-full animate-pulse"></div> */}
-        </div>
+          <div className="absolute -top-1 -right-1 w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
+        </div> */}
         <div className="flex flex-col">
           <span className="font-mono font-bold text-gray-800 dark:text-gray-200 leading-tight text-lg tracking-wider">
             {formatTime(time)}
